@@ -13,14 +13,14 @@
 	  {
 		"kind": "main",
 		"tag": "com-fd-djaja-sap-sac-restapi",
-		"url": "https://Mataboge-Jafta.github.io/restProdSim/restapi.js",
+		"url": "https://jaftamat.github.io/restProdSim/restapi.js",
 		"integrity": "",
 		"ignoreIntegrity": true
 	  },
 	  {
 		"kind": "styling",
 		"tag": "com-fd-djaja-sap-sac-restapi-aps",
-		"url": "https://Mataboge-Jafta.github.io/restProdSim/restapi_aps.js",
+		"url": "https://jaftamat.github.io/restProdSim/restapi_aps.js",
 		"integrity": "",
 		"ignoreIntegrity": true
 	  }
