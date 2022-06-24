@@ -12,7 +12,7 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
-            "url": "https://Mataboge-Jafta.github.io/template_widget/webcomponent.js",
+            "url": "https://jaftamat.github.io/template_widget/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : false
         }
