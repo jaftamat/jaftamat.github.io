@@ -14,7 +14,7 @@
 			"tag": "com-sap-sample-helloworld1",
             "url": "https://jaftamat.github.io/template_widget/webcomponent.js",
             "integrity": "",
-            "ignoreIntegrity" : true
+            "ignoreIntegrity" : false
         }
     ],
 	"properties": {
