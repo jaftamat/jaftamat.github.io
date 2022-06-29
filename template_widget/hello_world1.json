@@ -2,7 +2,7 @@
 	"name": "Hello World Step 1",
 	"description": "The first step in creating a minamilistic KPI tile",
 	"eula": "",
-	"vendor": "",
+	"vendor": "Jafta Mataboge",
 	"license": "",
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "HelloWorld1",
