@@ -2,7 +2,7 @@
 	"name": "Hello World Step 1",
 	"description": "The first step in creating a minamilistic KPI tile",
 	"eula": "",
-	"vendor": "Jafta",
+	"vendor": "",
 	"license": "",
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "HelloWorld1",
@@ -14,7 +14,7 @@
 			"tag": "com-sap-sample-helloworld1",
             "url": "https://jaftamat.github.io/template_widget/webcomponent.js",
             "integrity": "",
-            "ignoreIntegrity" : false
+            "ignoreIntegrity" : true
         }
     ],
 	"properties": {
