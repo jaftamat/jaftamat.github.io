@@ -1,9 +1,8 @@
 (function() {
 	let template = document.createElement("template");
 	template.innerHTML = `
-		<style>
-		</style>
-	`;
+        <h1>Hello World</h1>
+    `;
 
 	class HelloWorldAps extends HTMLElement {
 		constructor() {
