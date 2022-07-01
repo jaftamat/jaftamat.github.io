@@ -2,6 +2,8 @@
     let _shadowRoot;
     let _id;
     let _score;
+    let _topn;
+    let _coords;
 
     let div;
     let Ar = [];
@@ -30,6 +32,8 @@
             this._export_settings = {};
             this._export_settings.restapiurl = "";
             this._export_settings.score = "";
+            this._export_settings.topn = "";
+            this._export_settings.coords = "";
             this._export_settings.name = "";
 
             this.addEventListener("click", event => {
@@ -137,19 +141,22 @@
 
         _renderExportButton() {
             let components = this.metadata ? JSON.parse(this.metadata)["components"] : {};
-            console.log("_renderExportButton-components");
-            console.log(components);
         }
 
         _firePropertiesChanged() {
             this.score = "";
+            this.topn = "";
+            this.coords = "";
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: {
-                        score: this.score
+                        score: this.score,
+                        topn: this.topn,
+                        coords: this.coords
                     }
                 }
             }));
+        
         }
 
         // SETTINGS
@@ -175,11 +182,29 @@
             this._export_settings.score = value;
         }
 
+        get topn() {
+            return this._export_settings.topn;
+        }
+        set topn(value) {
+            value = _topn;
+            this._export_settings.topn = value;
+        }
+
+        get coords() {
+            return this._export_settings.coords;
+        }
+        set coords(value) {
+            value = _coords;
+            this._export_settings.coords = value;
+        }
+
         static get observedAttributes() {
             return [
                 "restapiurl",
                 "name",
-                "score"
+                "score",
+                "topn",
+                "coords"
             ];
         }
 
@@ -200,13 +225,11 @@
         div.slot = "content_" + widgetName;
 
         var restAPIURL = that._export_settings.restapiurl;
-        console.log("restAPIURL: " + restAPIURL);
 
         if (that._firstConnectionUI5 === 0) {
-            console.log("--First Time --");
 
             let div0 = document.createElement('div');
-            div0.innerHTML = '<?xml version="1.0"?><script id="oView_' + widgetName + '" name="oView_' + widgetName + '" type="sapui5/xmlview"><mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" height="100%" controllerName="myView.Template"><l:VerticalLayout class="sapUiContentPadding" width="100%"><l:content><Input id="input"  placeholder="Enter partner number..." liveChange=""/></l:content><Button id="buttonId" class="sapUiSmallMarginBottom" text="Get Similar Products" width="150px" press=".onButtonPress" /></l:VerticalLayout></mvc:View></script>';
+            div0.innerHTML = '<?xml version="1.0"?><script id="oView_' + widgetName + '" name="oView_' + widgetName + '" type="sapui5/xmlview"><mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" height="100%" controllerName="myView.Template"><l:VerticalLayout class="sapUiContentPadding" width="100%"><l:content><Input id="input"  placeholder="Enter product number..." liveChange=""/></l:content><Button id="buttonId" class="sapUiSmallMarginBottom" text="Get Similar Products" width="150px" press=".onButtonPress" /></l:VerticalLayout></mvc:View></script>';
             _shadowRoot.appendChild(div0);
 
             let div1 = document.createElement('div');
@@ -221,7 +244,6 @@
                 'id': widgetName,
                 'div': mapcanvas_divstr
             });
-            console.log(Ar);
         }
 
         sap.ui.getCore().attachInit(function() {
@@ -240,8 +262,7 @@
 
                     onButtonPress: function(oEvent) {
 
-                        var product = oView.byId("input").getValue(); //"0004540866"
-                        console.log(product);
+                        var product = oView.byId("input").getValue();
 
                         $.ajax({
                             url: restAPIURL,
@@ -251,18 +272,20 @@
                             }),
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
-                                console.log(data);
                                 let result = '';
-                                for (let i = 0; i < data['similar products'].length; i++) {
-                                    console.log(data['similar products'][i])
-                                    result = result.concat(data['similar products'][i])
+                                for (let i = 0; i < data['topn'].length; i++) {
+                                    result = result.concat(data['topn'][i])
                                 }
-                                console.log(result);
-                                _score = data["similar products"];
-
+                                _score = data["topn"];
+                                _topn =  data["topn"];
+                                let concatcoords = '';
+                                _coords = concatcoords.concat(data["x_coords"], ";" , data["y_coords"], ";" , data["z_coords"]);
+                                const datasetarray = _coords.split(';');
                                 that._firePropertiesChanged();
                                 this.settings = {};
                                 this.settings.score = "";
+                                this.settings.topn = "";
+                                this.settings.coords = "";
 
                                 that.dispatchEvent(new CustomEvent("onStart", {
                                     detail: {
@@ -279,7 +302,6 @@
                 });
             });
 
-            console.log("widgetName:" + widgetName);
             var foundIndex = Ar.findIndex(x => x.id == widgetName);
             var divfinal = Ar[foundIndex].div;
 
