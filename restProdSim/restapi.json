@@ -34,7 +34,7 @@
 	  "restapiurl": {
 		"type": "string",
 		"description": "The REST API URL",
-		"default": "https://bcx-prod-sim-001.c-07113c9.kyma.ondemand.com/predict?="
+		"default": "https://bcx-prod-sim-001.c-07113c9.kyma.ondemand.com/predict?product="
 	  },
 	  "name": {
 		"type": "string",
@@ -75,12 +75,28 @@
 		],
 		"body": "this.restapiurl = value;"
 	  },
+
 	  "getScore": {
 		"returnType": "string",
 		"description": "Get the score",
 		"parameters": [],
 		"body": "return this.score;"
 	  },
+
+	  "getTopn": {
+		"returnType": "string",
+		"description": "Get the TopN",
+		"parameters": [],
+		"body": "return this.topn;"
+	  },
+	  
+	  "getCoords": {
+		"returnType": "string",
+		"description": "Get the x, y, z coordinates",
+		"parameters": [],
+		"body": "return this.coords;"
+	  },
+
 	  "setScore": {
 		"description": "Set the score",
 		"parameters": [
@@ -92,12 +108,14 @@
 		],
 		"body": "this.score = value;"
 	  },
+
 	  "getName": {
 		"returnType": "string",
 		"description": "Get widget name",
 		"parameters": [],
 		"body": "return this.name;"
 	  },
+	  
 	  "setName": {
 		"description": "Set widget name",
 		"parameters": [
