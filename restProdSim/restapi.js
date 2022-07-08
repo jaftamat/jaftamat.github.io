@@ -201,7 +201,6 @@
         static get observedAttributes() {
             return [
                 "restapiurl",
-                "name",
                 "score",
                 "topn",
                 "coords"
@@ -264,13 +263,14 @@
 
                         var product = oView.byId("input").getValue();
                         console.log(product);
-                        console.log(restAPIURL);
+                        console.log(restAPIURL)
 
                         $.ajax({
                             url: restAPIURL,
                             type: 'GET',
-                            data: product,
-                            
+                            data: $.param({
+                                "product": product
+                            }),
                             
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
