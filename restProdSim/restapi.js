@@ -269,9 +269,8 @@
                         $.ajax({
                             url: restAPIURL,
                             type: 'GET',
-                            data: $.param({
-                                "product": product
-                            }),
+                            data: product,
+                            
                             
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
