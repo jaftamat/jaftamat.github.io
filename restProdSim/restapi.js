@@ -263,6 +263,8 @@
                     onButtonPress: function(oEvent) {
 
                         var product = oView.byId("input").getValue();
+                        console.log(product);
+                        console.log(restAPIURL);
 
                         $.ajax({
                             url: restAPIURL,
@@ -270,6 +272,7 @@
                             data: $.param({
                                 "product": product
                             }),
+                            
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
                                 let result = '';
