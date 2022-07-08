@@ -201,6 +201,7 @@
         static get observedAttributes() {
             return [
                 "restapiurl",
+                "name",
                 "score",
                 "topn",
                 "coords"
@@ -263,7 +264,7 @@
 
                         var product = oView.byId("input").getValue();
                         console.log(product);
-                        console.log(restAPIURL)
+                        console.log(restAPIURL);
 
                         $.ajax({
                             url: restAPIURL,
@@ -274,10 +275,13 @@
                             
                             contentType: 'application/x-www-form-urlencoded',
                             success: function(data) {
+                                console.log(data);
                                 let result = '';
                                 for (let i = 0; i < data['topn'].length; i++) {
+                                    console.log(data['topn'][i]);
                                     result = result.concat(data['topn'][i])
                                 }
+                                console.log(result);
                                 _score = data["topn"];
                                 _topn =  data["topn"];
                                 let concatcoords = '';
