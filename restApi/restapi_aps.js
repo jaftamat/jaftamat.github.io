@@ -35,6 +35,18 @@
               <td><label for="Widget Name">Widget Name</label></td>
               <td><input id="name" name="name" type="text"></td>
             </tr>
+            <tr>
+              <td><label for="Model Version">Model Version</label></td>
+              <td><input id="Version" name="Version" type="text"></td>
+            </tr>
+            <tr>
+              <td><label for="Client ID">Client ID</label></td>
+              <td><input id="Client ID" name="Client ID" type="text"></td>
+            </tr>
+            <tr>
+              <td><label for="Client Secret">Client Secret</label></td>
+              <td><input id="Secret" name="Secret" type="text"></td>
+            </tr>
           </table>
         </fieldset>
         <button type="submit" hidden>Submit</button>
