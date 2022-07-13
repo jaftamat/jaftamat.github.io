@@ -1,6 +1,6 @@
 {
 	"id": "com.fd.djaja.sap.sac.restapi",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"name": "restAPI",
 	"description": "restAPI",
 	"newInstancePrefix": "restAPI",
