@@ -466,5 +466,5 @@
 			}
 		}
 	
-		customElements.define("com-sap-sample-scatter", ScatterPlot);
+		customElements.define("com-bcx-widget-scatterplot", ScatterPlot);
 	})();

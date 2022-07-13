@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"name": "restScatter",
 	"description": "restScatter",
-	"newInstancePrefix": "restScatter",
+	"newInstancePrefix": "scatterplot",
 	"icon": "https://jaftamat.github.io/rest_scater_test/scatter3d.png",
 	"vendor": "SAP",
 	"eula": "",
@@ -11,7 +11,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-sample-scatter",
+			"tag": "com-bcx-widget-scatterplot",
 			"url": "https://jaftamat.github.io/rest_scater_test/restScatter.js",
 			"integrity": "",
 			"ignoreIntegrity": true
@@ -24,26 +24,26 @@
 			"default": "Label"
 		},
 		"value": {
-			"type": "integer",
+			"type": "string",
 			"description": "value",
-			"default": 10
+			"default": ""
 		}
 	},
 	"methods": {
 		"setValue": {
-			"description": "Sets the gauge value.",
+			"description": "Sets the coordinate values.",
 			"parameters": [
 				{
 					"name": "newValue",
-					"type": "integer",
-					"description": "The new gauge value."
+					"type": "string",
+					"description": "The new coordinate values."
 				}
 			],
 			"body": "this.value = newValue;"
 		},
 		"getValue": {
-			"returnType": "integer",
-			"description": "Returns the gauge value",
+			"returnType": "string",
+			"description": "Returns the coordinate values",
 			"body": "return this.value;"
 		},
 		"setLabel": {
@@ -65,7 +65,7 @@
 	},
 	"events": {
 		"onClick": {
-			"description": "Called when the user clicks the Colored Box."
+			"description": "Called when the user clicks the widget."
 		}
 	}
 }
