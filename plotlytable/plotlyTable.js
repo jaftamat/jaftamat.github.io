@@ -393,8 +393,12 @@
                 
                 if ((myProps["label"] != "") && (myProps["label"] != "Label")) {
                     var labelarray = myProps["label"];
-                    var arrayWidth = labelarray[0].length;
-    
+                    labelarray.forEach(function(row, index) {
+                        var pct = (parseFloat(row[2])*100).toFixed(3);
+                        var newrow = [row[0], row[1], pct]
+                        this[index] = newrow;
+                      }, labelarray); 
+                    
                     const rows = labelarray.length;
                     const cols = labelarray[0].length;
                     let grid = [];
@@ -406,25 +410,22 @@
                         for (let col = 0; col <cols; col++) {
                             let cell_value = labelarray[row][col]; 
                             grid[col][row] = labelarray[row][col];
-                            if (col = cols) {
-                                console.log(labelarray[row][col], row, col);
-                                console.log((parseFloat(labelarray[row][col]) * 100));
-                            };
                         };
                     };
     
                     var data = [{
                         type: 'table',
+                        columnwidth: [1,3,1],
                         header: {
                             values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
-                            align: ["center", "left", "left"],
+                            align: ["center", "left", "center"],
                             line: {width: 1, color: 'black'},
                             fill: {color: "grey"},
                             font: {family: "Arial", size: 12, color: "white"}
                         },
                         cells: {
                             values: grid,
-                            align: ["center", "left", "left"],
+                            align: ["center", "left", "center"],
                             line: {color: "black", width: 1},
                             font: {family: "Arial", size: 11, color: ["black"]}
                         },
@@ -432,7 +433,7 @@
     
                     var layout = {
                         height: "750",
-                        width: "500",
+    //					width: "500",
                         margin: {l: 20, r: 0, b: 0, t: 0}
                         }
     
