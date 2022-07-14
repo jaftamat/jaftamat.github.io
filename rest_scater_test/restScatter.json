@@ -1,11 +1,11 @@
 {
 	"id": "com.bcx.widget.scatterplot",
 	"version": "1.0.0",
-	"name": "restScatter",
-	"description": "restScatter",
+	"name": "scatterplot",
+	"description": "scatter Plot",
 	"newInstancePrefix": "scatterplot",
 	"icon": "https://jaftamat.github.io/rest_scater_test/scatter3d.png",
-	"vendor": "SAP",
+	"vendor": "BCX",
 	"eula": "",
 	"license": "",
 	"webcomponents": [
