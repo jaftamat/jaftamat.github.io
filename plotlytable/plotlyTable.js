@@ -427,6 +427,7 @@
                             values: grid,
                             align: ["center", "left", "center"],
                             line: {color: "black", width: 1},
+                            fill: {color: ['#25FEFD','white','#506784']},
                             font: {family: "Arial", size: 11, color: ["black"]}
                         },
                         }];
