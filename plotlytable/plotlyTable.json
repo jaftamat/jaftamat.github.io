@@ -15,6 +15,13 @@
 			"url": "https://jaftamat.github.io/plotlytable/plotlyTable.js",
 			"integrity": "",
 			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-bcx-widget-plotlytable",
+			"url": "https://jaftamat.github.io/plotlytable/plotlyTable.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}
 	],
 	"properties": {
@@ -26,6 +33,16 @@
 		"value": {
 			"type": "string",
 			"description": "value",
+			"default": ""
+		},
+		"size": {
+			"type": "string",
+			"description": "size",
+			"default": ""
+		},
+		"color": {
+			"type": "string",
+			"description": "color",
 			"default": ""
 		}
 	},
