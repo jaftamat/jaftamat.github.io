@@ -361,7 +361,30 @@
                         text-decoration:none;
                         cursor:pointer;
                     }
-                </style> 
+                    fieldset{
+                        margin-bottom: 10px;
+                        border: 1px solid #afafaf;
+                        border-radius: 3px;
+                    }
+                </style>
+
+                <form id="form" autocomplete="off">
+                    <fieldset>
+                    <legend>General</legend>
+                        <table>
+                            <tr>
+                                <td><label for="text size">Text Size</label></td>
+                                <td><input id="text size" name="text size" type="text"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="text color">Text color</label></td>
+                                <td><input id="text color" name="text color" type="text"</td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <button type="submit" hidden>Submit</button>
+                </form>
+
                 
                 <div id="chart_div"></div>`;
     
