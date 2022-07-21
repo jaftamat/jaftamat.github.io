@@ -28,12 +28,12 @@
           <legend>General</legend>
           <table>
             <tr>
-              <td><label for="REST API URL">REST API URL</label></td>
-              <td><input id="restapiurl" name="restapiurl" type="text"></td>
+              <td><label for="Text Size">Text Size</label></td>
+              <td><input id="textsize" name="textsize" type="text"></td>
             </tr>
             <tr>
-              <td><label for="Widget Name">Widget Name</label></td>
-              <td><input id="name" name="name" type="text"></td>
+              <td><label for="Text Color">Text Color</label></td>
+              <td><input id="textcolor" name="textcolor" type="text"></td>
             </tr>
           </table>
         </fieldset>
@@ -82,19 +82,19 @@
             }));
         }
 
-        get restapiurl() {
-            return this.getValue("restapiurl");
+        get textsize() {
+            return this.getValue("textsize");
         }
-        set restapiurl(value) {
+        set textsize(value) {
           console.log("value: " + value);
-            this.setValue("restapiurl", value);
+            this.setValue("textsize", value);
         }
 
-        get name() {
-            return this.getValue("name");
+        get textcolor() {
+            return this.getValue("textcolor");
         }
-        set name(value) {
-            this.setValue("name", value);
+        set textcolor(value) {
+            this.setValue("textcolor", value);
         } 
 
         getValue(id) {
@@ -107,8 +107,8 @@
 
         static get observedAttributes() {
             return [
-                "restapiurl",
-                "name"
+                "textsize",
+                "textcolor"
             ];
         }
 
