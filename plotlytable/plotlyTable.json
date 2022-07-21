@@ -18,8 +18,8 @@
 		},
 		{
 			"kind": "styling",
-			"tag": "com-bcx-widget-plotlytable",
-			"url": "https://jaftamat.github.io/plotlytable/plotlyTable.js",
+			"tag": "com-bcx-widget-plotlytable-aps",
+			"url": "https://jaftamat.github.io/plotlytable/plotlyTable_aps.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
