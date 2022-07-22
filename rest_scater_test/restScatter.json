@@ -15,6 +15,13 @@
 			"url": "https://jaftamat.github.io/rest_scater_test/restScatter.js",
 			"integrity": "",
 			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-bcx-widget-scatterplot-aps",
+			"url": "https://jaftamat.github.io/rest_scater_test/restScatter_aps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
 		}
 	],
 	"properties": {
