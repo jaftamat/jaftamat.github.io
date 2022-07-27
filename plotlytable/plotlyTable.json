@@ -25,6 +25,11 @@
 		}
 	],
 	"properties": {
+		"metadata": {
+			"type" : "string",
+			"description": "for internal use",
+			"default": ""
+		},
 		"label": {
 			"type": "string",
 			"description": "label",
@@ -35,15 +40,15 @@
 			"description": "value",
 			"default": ""
 		},
-		"size": {
+		"textsize": {
 			"type": "string",
-			"description": "size",
+			"description": "sets the size of the text",
 			"default": ""
 		},
-		"color": {
+		"textcolor": {
 			"type": "string",
-			"description": "color",
-			"default": ""
+			"description": "sets the colour of the text",
+			"default": "blue"
 		}
 	},
 	"methods": {
@@ -88,12 +93,13 @@
 					"description": "sets the new textSize"
 				}
 			],
-			"body": "this.size = newSize;"
+			"body": "this.textsize = newSize;"
 		},
 		"getSize": {
 			"returnType": "string",
 			"description": "Returns the new size",
-			"body":"return this.size;"
+			"parameters": [],
+			"body":"return this.textsize;"
 		},
 		"setColor": {
 			"description": "sets the colour of the text",
@@ -104,12 +110,13 @@
 					"description": "sets the newColor of the text"
 				}
 			],
-			"body": "this.color = newColor;"
+			"body": "this.textcolor = newColor;"
 		},
 		"getColor": {
 			"returnType": "string",
 			"description": "returns the new color",
-			"body":"return this.color;"
+			"parameters": [],
+			"body":"return this.textcolor;"
 		}
 	},
 
