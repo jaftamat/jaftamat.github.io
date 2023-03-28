@@ -1,0 +1,38 @@
+{
+    "id": "com.rohitchouhan.sap.chatgptwidgetss",
+    "version": "1.0.2",
+    "name": "SA Stats Widget",
+    "description": "ChatGPT Custom Widget for SAP Analytics Cloud, To make your application more useful and effective.",
+    "newInstancePrefix": "ChatGptWidget",
+    "vendor": "Rohit Chouhan",
+    "eula": "",
+    "license": "MIT",
+    "icon": "https:\/\/raw.githubusercontent.com\/SAP-Custom-Widget\/ChatGptWidget\/main\/icon.png",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-rohitchouhan-sap-chatgptwidgetss",
+            "url": "https://phmgaguli.github.io/BCX-ProdSimApi/newWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "builder",
+            "tag": "com-rohitchouhan-sap-chatgptwidget-builderss",
+            "url": "https://phmgaguli.github.io/BCX-ProdSimApi/newWidget_Builder.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "properties": {
+
+    },
+    "methods": {
+
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
