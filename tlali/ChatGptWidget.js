@@ -88,6 +88,10 @@
         const prompt = promptInput.value;
         const response = await fetch("https://stats-app.c-07113c9.kyma.ondemand.com/", {
           method: "POST",
+          mode: 'cors',
+          headers: {
+          'Content-Type': 'application/json'
+          },
           // headers: {
           //   "Content-Type": "application/json",
           //   "Authorization": "Bearer " + apiKey
