@@ -86,7 +86,7 @@
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("http://127.0.0.1:8080/data", {
+        const response = await fetch("http://127.0.0.1:8080/", {
           method: "POST",
           // headers: {
           //   "Content-Type": "application/json",
