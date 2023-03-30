@@ -77,7 +77,7 @@
           const promptInput = this.shadowRoot.getElementById("prompt-input");
           const generatedText = this.shadowRoot.getElementById("generated-text");
           generatedText.value = "Finding result...";
-          const prompt = promptInput.value;
+          const prompt = promptInput;
           const response = await fetch("https://stats-app.c-07113c9.kyma.ondemand.com/data", {
             method: "GET",
             mode: 'cors',
