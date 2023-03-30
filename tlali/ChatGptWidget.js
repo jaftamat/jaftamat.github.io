@@ -103,7 +103,8 @@
         const {
           choices
         } = await response.json();
-        const generatedTextValue = choices[0].text;
+        console.log(choices)
+        const generatedTextValue = choices.text;
         generatedText.value = generatedTextValue;//.replace(/^\n+/, '');
       });
     }
