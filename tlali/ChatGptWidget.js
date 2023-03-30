@@ -87,7 +87,7 @@
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
         const response = await fetch("https://stats-app.c-07113c9.kyma.ondemand.com/", {
-          method: "POST",
+          method: "GET",
           mode: 'cors',
           // headers: {
           //   "Content-Type": "application/json",
