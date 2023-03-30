@@ -74,37 +74,37 @@
     async initMain() {
       const generatedText = this.shadowRoot.getElementById("generated-text");
       generatedText.value = "";
-      const {
-        apiKey
-      } = this._props || "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";
-      const {
-        max_tokens
-      } = this._props || 1024;
+      // const {
+      //   apiKey
+      // } = this._props || "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";
+      // const {
+      //   max_tokens
+      // } = this._props || 1024;
       const generateButton = this.shadowRoot.getElementById("generate-button");
       generateButton.addEventListener("click", async () => {
         const promptInput = this.shadowRoot.getElementById("prompt-input");
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "Finding result...";
         const prompt = promptInput.value;
-        const response = await fetch("https://api.openai.com/v1/completions", {
+        const response = await fetch("http://127.0.0.1:8080/data", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + apiKey
-          },
-          body: JSON.stringify({
-            "model": "text-davinci-002",
-            "prompt": prompt,
-            "max_tokens": parseInt(max_tokens),
-            "n": 1,
-            "temperature": 0.5
-          })
+          // headers: {
+          //   "Content-Type": "application/json",
+          //   "Authorization": "Bearer " + apiKey
+          // },
+          // body: JSON.stringify({
+          //   "model": "text-davinci-002",
+          //   "prompt": prompt,
+          //   "max_tokens": parseInt(max_tokens),
+          //   "n": 1,
+          //   "temperature": 0.5
+          // })
         });
         const {
           choices
         } = await response.json();
         const generatedTextValue = choices[0].text;
-        generatedText.value = generatedTextValue.replace(/^\n+/, '');
+        generatedText.value = generatedTextValue;//.replace(/^\n+/, '');
       });
     }
     onCustomWidgetBeforeUpdate(changedProperties) {

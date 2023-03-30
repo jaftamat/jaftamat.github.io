@@ -109,31 +109,31 @@ input[type="color"]::-webkit-color-swatch {
       }
       _submit(e) {
          e.preventDefault();
-         this.dispatchEvent(
-            new CustomEvent("propertiesChanged", {
-               detail: {
-                  properties: {
-                     apiKey: this.apiKey,
-                     max_tokens: this.max_tokens
-                  },
-               },
-            })
-         );
+         // this.dispatchEvent(
+         //    new CustomEvent("propertiesChanged", {
+         //       detail: {
+         //          properties: {
+         //             apiKey: this.apiKey,
+         //             max_tokens: this.max_tokens
+         //          },
+         //       },
+         //    })
+         // );
       }
 
-      set apiKey(_apiKey) {
-         this._shadowRoot.getElementById("builder_apiKey").value = _apiKey;
-      }
-      get apiKey() {
-         return this._shadowRoot.getElementById("builder_apiKey").value;
-      }
+      // set apiKey(_apiKey) {
+      //    this._shadowRoot.getElementById("builder_apiKey").value = _apiKey;
+      // }
+      // get apiKey() {
+      //    return this._shadowRoot.getElementById("builder_apiKey").value;
+      // }
 
-      set max_tokens(_max_tokens) {
-         this._shadowRoot.getElementById("builder_max_tokens").value = _max_tokens;
-      }
-      get max_tokens() {
-         return this._shadowRoot.getElementById("builder_max_tokens").value;
-      }
+      // set max_tokens(_max_tokens) {
+      //    this._shadowRoot.getElementById("builder_max_tokens").value = _max_tokens;
+      // }
+      // get max_tokens() {
+      //    return this._shadowRoot.getElementById("builder_max_tokens").value;
+      // }
 
    }
    customElements.define("com-rohitchouhan-sap-chatgptwidget-builder",
