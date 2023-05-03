@@ -1,0 +1,24 @@
+{
+    "id": "com.bcx.sap.statscpitwidget",
+    "version": "1.0.2",
+    "name": "Stats cpi Widget",
+    "description": "Stats cpi custom Widget to fetch and set data from the backend",
+    "newInstancePrefix": "StatsCPIWidget",
+    "vendor": "BCX",
+    "eula": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-bcx-sap-statscpiwidget",
+            "url": "https:\/\/cdn.jsdelivr.net\/gh\/SAP-Custom-Widget\/ChatGptWidget@1.0.2\/ChatGptWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "methods": {},
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
