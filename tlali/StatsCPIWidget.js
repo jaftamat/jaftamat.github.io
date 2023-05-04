@@ -100,5 +100,5 @@
         this.initMain();
       }
     }
-    customElements.define("com-bcx-sap-statsdatawidget", Widget);
+    customElements.define("com-bcx-sap-statscpiwidget", Widget);
   })();
