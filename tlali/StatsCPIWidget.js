@@ -78,7 +78,7 @@
           // const generatedText = this.shadowRoot.getElementById("generated-text");
           generatedText.value = "Finding result...";
           // const prompt = promptInput;
-          const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/url", {
+          const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/data", {
             method: "GET",
             mode: 'cors',
           });
