@@ -86,7 +86,7 @@
             choices
           } = await response.json();
           console.log(choices)
-          const generatedTextValue = choices.text;
+          const generatedTextValue = choices;
           generatedText.value = generatedTextValue;
         });
       }
