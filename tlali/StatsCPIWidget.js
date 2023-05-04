@@ -74,11 +74,11 @@
 
         const generateButton = this.shadowRoot.getElementById("generate-button");
         generateButton.addEventListener("click", async () => {
-          const promptInput = this.shadowRoot.getElementById("prompt-input");
-          const generatedText = this.shadowRoot.getElementById("generated-text");
+          // const promptInput = this.shadowRoot.getElementById("prompt-input");
+          // const generatedText = this.shadowRoot.getElementById("generated-text");
           generatedText.value = "Finding result...";
-          const prompt = promptInput;
-          const response = await fetch("https://stats-app.c-07113c9.kyma.ondemand.com", {
+          // const prompt = promptInput;
+          const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/url", {
             method: "GET",
             mode: 'cors',
           });
