@@ -1,0 +1,31 @@
+{
+    "id": "com.bcx.sap.statscpiwidget",
+    "version": "1.0.2",
+    "name": "Stats cpi Widget",
+    "description": "Stats cpi custom Widget to fetch and set data from the backend",
+    "newInstancePrefix": "StatsCPIWidget",
+    "vendor": "BCX",
+    "eula": "",
+    "webcomponents": [
+        {
+            "kind": "main",
+            "tag": "com-bcx-sap-statscpiwidget",
+            "url": "https:\/\/jaftamat.github.io\/jeff_stats\/StatsCPIWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        }
+    ],
+    "methods": {},
+    "properties": {
+        "metadata": {
+		"type": "string",
+		"description": "For internal use",
+		"default": ""
+	  }
+    },
+    "events": {
+        "onClick": {
+            "description": "User Clicked."
+        }
+    }
+}
