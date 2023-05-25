@@ -55,6 +55,11 @@
       </div>
       <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
     </div>
+    
+    <div id="chart-container"></div>
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
       `;
     class Widget extends HTMLElement {
       constructor() {
@@ -70,6 +75,7 @@
       }
       async initMain() {
         const generatedText = this.shadowRoot.getElementById("generated-text");
+        let chartData = [];
         generatedText.value = "";
 
         const generateButton = this.shadowRoot.getElementById("generate-button");
@@ -87,9 +93,15 @@
           } = await response.json();
           console.log(choices)
           const generatedTextValue = choices;
+          choices.forEach(choice => {
+            chartData.push({ x: choice.label, y: choice.value });
+          });
           generatedText.value = generatedTextValue;
+
         });
+        Plotly.newPlot(chartContainer, [{ x: chartData.map(item => item.x), y: chartData.map(item => item.y), type: 'bar' }]);
       }
+
       onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = {
           ...this._props,
