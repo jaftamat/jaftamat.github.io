@@ -13,7 +13,7 @@
       </style>
     `;
 
-    class restAPI extends HTMLElement {
+    class StatsCPIWidget extends HTMLElement {
 
         constructor() {
             super();

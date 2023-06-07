@@ -53,7 +53,7 @@
       </form>
     `;
 
-    class restAPIAps extends HTMLElement {
+    class StatsCPIWidgetAps extends HTMLElement {
         constructor() {
             super();
             this._shadowRoot = this.attachShadow({ mode: "open" });
@@ -70,7 +70,7 @@
         _submit(e) {
             e.preventDefault();
             let properties = {};
-            for (let name of restAPIAps.observedAttributes) {
+            for (let name of StatsCPIWidgetAps.observedAttributes) {
                 properties[name] = this[name];
             }
             console.log(properties);
@@ -125,7 +125,7 @@
         }
 
         attributeChangedCallback(name, oldValue, newValue) {
-            if (oldValue != newValue) {
+            if (oldValue !== newValue) {
                 this[name] = newValue;
             }
         }
