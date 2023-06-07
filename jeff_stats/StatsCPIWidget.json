@@ -99,7 +99,7 @@
 	},
 	"events": {
 	  "onStart": {
-		"description": "onStart events trigger"
+		"description": "onStart events trigger" 
 	  }
 	}
   }
