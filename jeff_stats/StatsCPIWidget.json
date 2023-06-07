@@ -10,22 +10,96 @@
         {
             "kind": "main",
             "tag": "com-bcx-sap-statscpiwidget",
-            "url": "https:\/\/jaftamat.github.io\/jeff_stats\/StatsCPIWidget.js",
+            "url": "https://jaftamat.github.io/jeff_stats/StatsCPIWidget.js",
+            "integrity": "",
+            "ignoreIntegrity": true
+        },
+        {
+            "kind": "styling",
+            "tag": "com-bcx-sap-statscpiwidget-aps",
+            "url": "https://jaftamat.github.io/jeff_stats/StatsCPIWidget_aps.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
     ],
-    "methods": {},
     "properties": {
         "metadata": {
 		"type": "string",
 		"description": "For internal use",
 		"default": ""
+	  },
+        "restapiurl": {
+		"type": "string",
+		"description": "The REST API URL",
+		"default": "https://stats.c-07113c9.kyma.ondemand.com/data"
+	  },
+	  "name": {
+		"type": "string",
+		"description": "widget name",
+		"default": ""
+	  },
+	  "score": {
+		"type": "string",
+		"description": "score",
+		"default": ""
 	  }
     },
-    "events": {
-        "onClick": {
-            "description": "User Clicked."
-        }
-    }
-}
+	"methods": {
+	  "getRestAPIUrl": {
+		"returnType": "string",
+		"description": "Get the REST API URL",
+		"parameters": [],
+		"body": "return this.restapiurl;"
+	  },
+	  "setRestAPIUrl": {
+		"description": "Set the REST API URL",
+		"parameters": [
+		  {
+			"name": "value",
+			"type": "string",
+			"description": "The new REST API URL"
+		  }
+		],
+		"body": "this.restapiurl = value;"
+	  },
+	  "getScore": {
+		"returnType": "string",
+		"description": "Get the score",
+		"parameters": [],
+		"body": "return this.score;"
+	  },
+		"setScore": {
+		"description": "Set the score",
+		"parameters": [
+		  {
+			"name": "value",
+			"type": "string",
+			"description": "The new score"
+		  }
+		],
+		"body": "this.score = value;"
+	  },
+	  "getName": {
+		"returnType": "string",
+		"description": "Get widget name",
+		"parameters": [],
+		"body": "return this.name;"
+	  },
+	  "setName": {
+		"description": "Set widget name",
+		"parameters": [
+		  {
+			"name": "value",
+			"type": "string",
+			"description": "The new widget name"
+		  }
+		],
+		"body": "this.name = value;"
+	  }
+	},
+	"events": {
+	  "onStart": {
+		"description": "onStart events trigger"
+	  }
+	}
+  }

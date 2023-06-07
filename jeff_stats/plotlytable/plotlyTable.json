@@ -1,0 +1,128 @@
+{
+	"id": "com.bcx.widget.plotlytable",
+	"version": "0.0.1",
+	"name": "Plotly Table",
+	"description": "A Plotly Table Widget",
+	"newInstancePrefix": "plotlytable",
+	"icon": "https://jaftamat.github.io/plotlytable/plotlyTable.png",
+	"vendor": "BCX",
+	"eula": "",
+	"license": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-bcx-widget-plotlytable",
+			"url": "https://jaftamat.github.io/plotlytable/plotlyTable.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		},
+		{
+			"kind": "styling",
+			"tag": "com-bcx-widget-plotlytable-aps",
+			"url": "https://jaftamat.github.io/plotlytable/plotlyTable_aps.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"metadata": {
+			"type" : "string",
+			"description": "for internal use",
+			"default": ""
+		},
+		"label": {
+			"type": "string",
+			"description": "label",
+			"default": "Label"
+		},
+		"value": {
+			"type": "string",
+			"description": "value",
+			"default": ""
+		},
+		"textsize": {
+			"type": "string",
+			"description": "sets the size of the text",
+			"default": ""
+		},
+		"textcolor": {
+			"type": "string",
+			"description": "sets the colour of the text",
+			"default": "blue"
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the coordinate values.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "The new coordinate values."
+				}
+			],
+			"body": "this.value = newValue;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the coordinate values",
+			"body": "return this.value;"
+		},
+		"setLabel": {
+			"description": "Sets the label value.",
+			"parameters": [
+				{
+					"name": "newLabel",
+					"type": "string",
+					"description": "The new label value."
+				}
+			],
+			"body": "this.label = newLabel;"
+		},
+		"getLabel": {
+			"returnType": "string",
+			"description": "Returns the gauge value",
+			"body": "return this.label;"
+		},
+		"setSize": {
+			"description": "sets the size of the text",
+			"parameters": [
+				{
+					"name": "newSize",
+					"type": "string",
+					"description": "sets the new textSize"
+				}
+			],
+			"body": "this.textsize = newSize;"
+		},
+		"getSize": {
+			"returnType": "string",
+			"description": "Returns the new size",
+			"parameters": [],
+			"body":"return this.textsize;"
+		},
+		"setColor": {
+			"description": "sets the colour of the text",
+			"parameters": [
+				{
+					"name": "newColor",
+					"type": "string",
+					"description": "sets the newColor of the text"
+				}
+			],
+			"body": "this.textcolor = newColor;"
+		},
+		"getColor": {
+			"returnType": "string",
+			"description": "returns the new color",
+			"parameters": [],
+			"body":"return this.textcolor;"
+		}
+	},
+
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the widget."
+		}
+	}
+}
