@@ -82,6 +82,8 @@
             method: "GET",
             mode: 'cors',
           });
+          console.log("Testing the data")
+          console.log(response.json())
           const {
             choices
           } = await response.json();
@@ -90,7 +92,7 @@
           generatedText.value = generatedTextValue;
         });
       }
-      onCustomWidgetBeforeUpdate(changedProperties) {
+      /*onCustomWidgetBeforeUpdate(changedProperties) {
         this._props = {
           ...this._props,
           ...changedProperties
@@ -98,6 +100,66 @@
       }
       onCustomWidgetAfterUpdate(changedProperties) {
         this.initMain();
+      }**/
+
+      onCustomWidgetBeforeUpdate(changedProperties) {
+            if ("designMode" in changedProperties) {
+                this._designMode = changedProperties["designMode"];
+            }
+      }
+
+      onCustomWidgetAfterUpdate(changedProperties) {
+            UI5(changedProperties, this);
+      }
+
+      _renderExportButton() {
+            let components = this.metadata ? JSON.parse(this.metadata)["components"] : {};
+      }
+      _firePropertiesChanged() {
+            this.score = "";
+            this.dispatchEvent(new CustomEvent("propertiesChanged", {
+                detail: {
+                    properties: {
+                        score: this.score
+                    }
+                }
+            }));
+
+      }
+
+      get restapiurl() {
+            return this._export_settings.restapiurl;
+      }
+      set restapiurl(value) {
+            this._export_settings.restapiurl = value;
+      }
+
+      get name() {
+            return this._export_settings.name;
+      }
+      set name(value) {
+            this._export_settings.name = value;
+      }
+
+      get score() {
+            return this._export_settings.score;
+      }
+      set score(value) {
+            value = _score;
+            this._export_settings.score = value;
+      }
+      static get observedAttributes() {
+            return [
+                "restapiurl",
+                "name",
+                "score"
+            ];
+      }
+
+      attributeChangedCallback(name, oldValue, newValue) {
+            if (oldValue != newValue) {
+                this[name] = newValue;
+            }
       }
     }
     customElements.define("com-bcx-sap-statscpiwidget", Widget);
