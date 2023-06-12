@@ -82,7 +82,7 @@
             method: "GET",
             mode: 'cors',
           });
-          fetch('https://example.com/data.json')
+          fetch('https://stats.c-07113c9.kyma.ondemand.com/data')
               .then(function(response) {
                   if (!response.ok) {
                       throw new Error('Network response was not ok');
@@ -95,7 +95,7 @@
               })
               .catch(function(error) {
                 // Handle any error that occurred during the request
-                  console.error('Error:', error);
+                  console.error('Error: fixer ndoda', error);
               })
           /*const last_reponse = response.json();
           console.log(last_reponse)
