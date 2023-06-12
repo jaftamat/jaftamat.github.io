@@ -82,7 +82,23 @@
             method: "GET",
             mode: 'cors',
           });
-          const last_reponse = response.json()
+          fetch('https://example.com/data.json')
+              .then(function(response) {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              })
+              .then(function(data) {
+                // Process the retrieved data
+                  console.log(data);
+              })
+              .catch(function(error) {
+                // Handle any error that occurred during the request
+                  console.error('Error:', error);
+              })
+          /*const last_reponse = response.json();
+          console.log(last_reponse)
           console.log("Testing the data")
           console.log(response.json())
           const {
@@ -90,7 +106,7 @@
           } = await response.json();
           console.log(choices)
           const generatedTextValue = choices;
-          generatedText.value = generatedTextValue;
+          generatedText.value = generatedTextValue;*/
         });
       }
       /*onCustomWidgetBeforeUpdate(changedProperties) {
