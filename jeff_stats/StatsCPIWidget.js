@@ -82,6 +82,7 @@
             method: "GET",
             mode: 'cors',
           });
+          const last_reponse = response.json()
           console.log("Testing the data")
           console.log(response.json())
           const {
