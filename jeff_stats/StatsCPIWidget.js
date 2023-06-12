@@ -82,6 +82,7 @@
             method: "GET",
             mode: 'cors',
           });
+          console.log("---------------------------------------------------------------------------------")
           fetch('https://stats.c-07113c9.kyma.ondemand.com/data')
               .then(function(response) {
                   if (!response.ok) {
@@ -97,6 +98,7 @@
                 // Handle any error that occurred during the request
                   console.error('Error: fixer ndoda', error);
               })
+            console.log("------------ DATA RECEIVED ---------------------------------------------------")
           /*const last_reponse = response.json();
           console.log(last_reponse)
           console.log("Testing the data")
