@@ -1,6 +1,6 @@
 {
     "id": "com.bcx.sap.statscpiwidget",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "Stats cpi",
     "description": "Stats cpi custom Widget to fetch and set data from the backend to frontend",
     "newInstancePrefix": "StatsCPIWidget",

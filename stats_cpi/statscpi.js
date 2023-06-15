@@ -99,7 +99,7 @@
                 // Process the retrieved data
                   console.log("I am here.......")
                   console.log(data);
-                  generatedText.value = data.toString();
+                  generatedText.value = JSON.stringify(data);
 
               })
               .catch(function(error) {
