@@ -78,7 +78,7 @@
           // const generatedText = this.shadowRoot.getElementById("generated-text");
           generatedText.value = "Finding result...";
           // const prompt = promptInput;
-          const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/data", {
+          /*const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/data", {
             method: "GET",
             mode: 'cors',
           });
@@ -87,7 +87,26 @@
           } = await response.json();
           console.log(choices)
           const generatedTextValue = choices;
-          generatedText.value = generatedTextValue;
+          generatedText.value = generatedTextValue;*/
+        fetch('https://stats.c-07113c9.kyma.ondemand.com/data')
+              .then(function(response) {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              })
+              .then(function(data) {
+                // Process the retrieved data
+                  console.log("I am here.......")
+                  console.log(data);
+
+              })
+              .catch(function(error) {
+                // Handle any error that occurred during the request
+                  console.error('Error: fixer ndoda', error);
+              })
+
+
         });
       }
       onCustomWidgetBeforeUpdate(changedProperties) {
