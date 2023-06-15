@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a5c594-c64c-4826-a0a1-d738fda2fd53" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Jeff_stats.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotlytable/plotlyTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/plotlytable/plotlyTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plotlytable/plotlyTable.json" beforeDir="false" afterPath="$PROJECT_DIR$/plotlytable/plotlyTable.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plotlytable/plotlyTable_aps.js" beforeDir="false" afterPath="$PROJECT_DIR$/plotlytable/plotlyTable_aps.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

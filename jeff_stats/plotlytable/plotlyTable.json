@@ -5,7 +5,7 @@
 	"description": "A Plotly Table Widget",
 	"newInstancePrefix": "New_plotlytable",
 	"icon": "https://jaftamat.github.io/jeff_stats/plotlytable/plotlyTable.png",
-	"vendor": "BCX",
+	"vendor": "jafta",
 	"eula": "",
 	"license": "",
 	"webcomponents": [
