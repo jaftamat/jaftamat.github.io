@@ -78,16 +78,6 @@
           // const generatedText = this.shadowRoot.getElementById("generated-text");
           generatedText.value = "Finding result...";
           // const prompt = promptInput;
-          /*const response = await fetch("https://stats.c-07113c9.kyma.ondemand.com/data", {
-            method: "GET",
-            mode: 'cors',
-          });
-          const {
-            choices
-          } = await response.json();
-          console.log(choices)
-          const generatedTextValue = choices;
-          generatedText.value = generatedTextValue;*/
         fetch('https://stats.c-07113c9.kyma.ondemand.com/data')
               .then(function(response) {
                   if (!response.ok) {
@@ -99,6 +89,7 @@
                 // Process the retrieved data
                   console.log("I am here.......")
                   console.log(data);
+                  console.log("Stringfy the data to the output")
                   generatedText.value = JSON.stringify(data);
 
               })
