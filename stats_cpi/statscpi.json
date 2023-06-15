@@ -10,7 +10,7 @@
         {
             "kind": "main",
             "tag": "com-bcx-sap-statscpiwidget",
-            "url": "https:\/\/jaftamat.github.io\/stats_cpi\/StatsCPIWidget.js",
+            "url": "https://jaftamat.github.io/stats_cpi/statscpi.js",
             "integrity": "",
             "ignoreIntegrity": true
         }
