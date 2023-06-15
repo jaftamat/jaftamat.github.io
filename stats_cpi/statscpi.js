@@ -99,7 +99,7 @@
                 // Process the retrieved data
                   console.log("I am here.......")
                   console.log(data);
-                  generatedText.value = data[[[0]]];
+                  generatedText.value = data.toString();
 
               })
               .catch(function(error) {
