@@ -1,24 +1,24 @@
 {
-	"id": "com.bcx.widget.plotlytable",
+	"id": "plotlytable",
 	"version": "0.0.1",
 	"name": "Plotly Table",
 	"description": "A Plotly Table Widget",
-	"newInstancePrefix": "plotlytable",
-	"icon": "https://jaftamat.github.io/plotlytable/plotlyTable.png",
+	"newInstancePrefix": "New_plotlytable",
+	"icon": "https://jaftamat.github.io/jeff_stats/plotlytable/plotlyTable.png",
 	"vendor": "BCX",
 	"eula": "",
 	"license": "",
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-bcx-widget-plotlytable",
-			"url": "https://jaftamat.github.io/plotlytable/plotlyTable.js",
+			"tag": "plotlytable",
+			"url": "https://jaftamat.github.io/jeff_stats/plotlytable/plotlyTable.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		},
 		{
 			"kind": "styling",
-			"tag": "com-bcx-widget-plotlytable-aps",
+			"tag": "plotlytable-aps",
 			"url": "https://jaftamat.github.io/plotlytable/plotlyTable_aps.js",
 			"integrity": "",
 			"ignoreIntegrity": true

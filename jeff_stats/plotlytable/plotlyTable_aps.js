@@ -118,5 +118,5 @@
             }
         }
     }
-    customElements.define("com-bcx-widget-plotlytable-aps", plotlyTableAps);
+    customElements.define("plotlytable-aps", plotlyTableAps);
 })();

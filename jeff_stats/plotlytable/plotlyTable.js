@@ -418,7 +418,7 @@
                         type: 'table',
                         columnwidth: [1,3,1],
                         header: {
-                            values: [["<b>Product ID</b>"], ["<b>Description</b>"],	["<b>Similarity</b>"]],
+                            values: [["<b>Category</b>"], ["<b>Date</b>"],	["<b>ID</b>"]],
                             align: ["center", "left", "center"],
                             line: {width: 1, color: 'black'},
                             fill: {color: "grey"},
@@ -444,5 +444,5 @@
             }
         }
     
-        customElements.define("com-bcx-widget-plotlytable", plotlytable);
+        customElements.define("plotlytable", plotlytable);
     })();
