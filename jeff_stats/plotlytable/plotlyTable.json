@@ -1,7 +1,7 @@
 {
 	"id": "plotlytable",
 	"version": "0.0.1",
-	"name": "Plotly Table",
+	"name": "Stats Plotly",
 	"description": "A Plotly Table Widget",
 	"newInstancePrefix": "New_plotlytable",
 	"icon": "https://jaftamat.github.io/jeff_stats/plotlytable/plotlyTable.png",
