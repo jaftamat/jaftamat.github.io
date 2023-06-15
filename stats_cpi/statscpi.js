@@ -99,12 +99,14 @@
                 // Process the retrieved data
                   console.log("I am here.......")
                   console.log(data);
+                  generatedText.value = data;
 
               })
               .catch(function(error) {
                 // Handle any error that occurred during the request
                   console.error('Error: fixer ndoda', error);
               })
+
 
 
         });
