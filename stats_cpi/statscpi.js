@@ -98,7 +98,7 @@
                   console.error('Error: fixer ndoda', error);
               })
             // Retrieving data fron the generated text
-            var jsonData = JSON.parse(generatedText.value);
+            const jsonData = generatedText.value;
             // Create table structure
             var table = document.createElement('table');
             var thead = document.createElement('thead');
