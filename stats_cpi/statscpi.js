@@ -97,6 +97,41 @@
                 // Handle any error that occurred during the request
                   console.error('Error: fixer ndoda', error);
               })
+            // Retrieving data fron the generated text
+            var jsonData = JSON.parse(generatedText.value);
+            // Create table structure
+            var table = document.createElement('table');
+            var thead = document.createElement('thead');
+            var tbody = document.createElement('tbody');
+            var headerRow = document.createElement('tr');
+
+            // Create table headers
+            for (var key in jsonData[0]) {
+              var th = document.createElement('th');
+              th.textContent = key;
+              headerRow.appendChild(th);
+            }
+
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+            table.appendChild(tbody);
+
+            // Populate the table with data
+            for (var i = 0; i < jsonData.length; i++) {
+              var row = document.createElement('tr');
+
+              for (var key in jsonData[i]) {
+                var cell = document.createElement('td');
+                cell.textContent = jsonData[i][key];
+                row.appendChild(cell);
+              }
+
+              tbody.appendChild(row);
+            }
+
+            // Append the table to a container
+            var container = document.getElementById('table-container');
+            container.appendChild(table);
 
 
 
