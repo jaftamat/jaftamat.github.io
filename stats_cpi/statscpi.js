@@ -126,9 +126,16 @@
                   }
               
                   // Append the table to a container
-                  var container = document.getElementById('table-container');
-                  
+                  var container = document.getElementById('container');
+                  if (container) {
+                    // Append the table element to the container
+                    container.appendChild(table);
+                  } else {
+                    console.error('Container element not found.');
+                  }
+
                   console.log('last step')
+
 
 
                   console.log("Stringfy the data to the output")
