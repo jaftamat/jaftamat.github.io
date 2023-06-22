@@ -9,6 +9,8 @@
       margin: 50px auto;
       max-width: 600px;
     }
+
+
     
     /* Style for the input container */
     .input-container {
@@ -50,11 +52,12 @@
         </style>
        <div>
     <center>
+      <div id="container"></div>
       <div class="input-container">
         <button id="generate-button">Fetch data</button>
       </div>
       <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
-      <div id="container"></div>    
+          
       </div>
     
       `;
