@@ -71,7 +71,7 @@
       async initMain() {
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "";
-        
+
         const generateButton = this.shadowRoot.getElementById("generate-button");
         generateButton.addEventListener("click", async () => {
           // const promptInput = this.shadowRoot.getElementById("prompt-input");
@@ -89,6 +89,48 @@
                 // Process the retrieved data
                   console.log("I am here.......")
                   console.log(data);
+
+                  // Retrieving data fron the generated text
+                  const jsonData = generatedText.value;
+                  // Create table structure
+                  console.log('Creating table structure')
+                  var table = document.createElement('table');
+                  var thead = document.createElement('thead');
+                  var tbody = document.createElement('tbody');
+                  var headerRow = document.createElement('tr');
+              
+                  // Create table headers
+                  console.log('Creating table headers')
+                  for (var key in jsonData[0]) {
+                    var th = document.createElement('th');
+                    th.textContent = key;
+                    headerRow.appendChild(th);
+                  }
+              
+                  thead.appendChild(headerRow);
+                  table.appendChild(thead);
+                  table.appendChild(tbody);
+              
+                  // Populate the table with data
+                  console.log('Populating table with data')
+                  for (var i = 0; i < jsonData.length; i++) {
+                    var row = document.createElement('tr');
+              
+                    for (var key in jsonData[i]) {
+                      var cell = document.createElement('td');
+                      cell.textContent = jsonData[i][key];
+                      row.appendChild(cell);
+                    }
+              
+                    tbody.appendChild(row);
+                  }
+              
+                  // Append the table to a container
+                  var container = document.getElementById('table-container');
+                  container.appendChild(table);
+
+
+
                   console.log("Stringfy the data to the output")
                   generatedText.value = JSON.stringify(data);
 
@@ -97,44 +139,7 @@
                 // Handle any error that occurred during the request
                   console.error('Error: fixer ndoda', error);
               })
-        // Retrieving data fron the generated text
-        const jsonData = generatedText.value;
-        // Create table structure
-        console.log('Creating table structure')
-        var table = document.createElement('table');
-        var thead = document.createElement('thead');
-        var tbody = document.createElement('tbody');
-        var headerRow = document.createElement('tr');
-    
-        // Create table headers
-        console.log('Creating table headers')
-        for (var key in jsonData[0]) {
-          var th = document.createElement('th');
-          th.textContent = key;
-          headerRow.appendChild(th);
-        }
-    
-        thead.appendChild(headerRow);
-        table.appendChild(thead);
-        table.appendChild(tbody);
-    
-        // Populate the table with data
-        console.log('Populating table with data')
-        for (var i = 0; i < jsonData.length; i++) {
-          var row = document.createElement('tr');
-    
-          for (var key in jsonData[i]) {
-            var cell = document.createElement('td');
-            cell.textContent = jsonData[i][key];
-            row.appendChild(cell);
-          }
-    
-          tbody.appendChild(row);
-        }
-    
-        // Append the table to a container
-        var container = document.getElementById('table-container');
-        container.appendChild(table);
+        
         });
       }
       onCustomWidgetBeforeUpdate(changedProperties) {
