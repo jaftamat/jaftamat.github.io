@@ -54,8 +54,9 @@
         <button id="generate-button">Fetch data</button>
       </div>
       <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
-    </div>
-    <div id="container"></div>
+      <div id="container"></div>    
+      </div>
+    
       `;
     class Widget extends HTMLElement {
       constructor() {
@@ -70,6 +71,9 @@
         this.initMain();
       }
       async initMain() {
+
+        const container = this.shadowRoot.getElementById('container');
+
         const generatedText = this.shadowRoot.getElementById("generated-text");
         generatedText.value = "";
 
