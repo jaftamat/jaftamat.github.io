@@ -55,6 +55,7 @@
       </div>
       <textarea id="generated-text" rows="10" cols="50" readonly></ textarea>
     </div>
+    <div id="container"></div>
       `;
     class Widget extends HTMLElement {
       constructor() {
