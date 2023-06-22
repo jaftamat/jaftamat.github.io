@@ -4,7 +4,7 @@
     "name": "Stats cpi",
     "description": "Stats cpi custom Widget that fetches and sets data from the backend to frontend",
     "newInstancePrefix": "StatsCPIWidget",
-    "vendor": "BCX",
+    "vendor": "BCX ",
     "eula": "",
     "webcomponents": [
         {
