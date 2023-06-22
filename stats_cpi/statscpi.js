@@ -127,7 +127,7 @@
               
                   // Append the table to a container
                   var container = document.getElementById('table-container');
-                  container.append(table);
+                  //container.append(table);
                   console.log('last step')
 
 
