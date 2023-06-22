@@ -98,6 +98,8 @@
                   var thead = document.createElement('thead');
                   var tbody = document.createElement('tbody');
                   var headerRow = document.createElement('tr');
+
+                  var container = document.createElement('container');
               
                   // Create table headers
                   console.log('Creating table headers')
