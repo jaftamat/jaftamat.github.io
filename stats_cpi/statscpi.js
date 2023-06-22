@@ -127,12 +127,13 @@
               
                   // Append the table to a container
                   var container = document.getElementById('table-container');
-                  //container.appendChild(table);
-                  console.log('last step')  
+                  container.append(table);
+                  console.log('last step')
+
 
 
                   console.log("Stringfy the data to the output")
-                  generatedText.value = table;
+                  generatedText.value = JSON.stringify(table);
 
               })
               .catch(function(error) {
