@@ -50,6 +50,7 @@
     </style>
     <div id="container">
       <center>
+      <div id="container"></div>
         <div class="input-container">
           <button id="generate-button">Fetch data</button>
         </div>
